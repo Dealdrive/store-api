@@ -11,7 +11,7 @@ const express = require("express");
  const cors = require("cors");
 
  dotenv.config();
- mongoose.set('strictQuery', true);
+ //mongoose.set('strictQuery', true);
 
  mongoose.connect(process.env.MONGO_URI).then(()=>console.log("DB Connected successfully")).catch((err)=>{
     console.log(err);
@@ -41,6 +41,6 @@ const express = require("express");
  app.use("/api/checkout", checkoutRoute)
 
 
- app.listen(process.env.PORT || 5000, () =>{
+ app.listen(5000, () =>{
     console.log("Backend server is running ")
  })
